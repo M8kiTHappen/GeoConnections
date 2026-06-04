@@ -6,8 +6,8 @@ export default function Tile({ tile, selected, shaking, onClick }) {
     <button
       onClick={onClick}
       className={[
-        'flex items-center justify-center rounded-sm text-center text-sm sm:text-base',
-        'w-full aspect-square sm:aspect-auto sm:h-20 px-2 py-3',
+        'flex items-center justify-center rounded-sm text-center text-xs sm:text-sm',
+        'w-full min-h-[4rem] sm:h-20 px-1.5 py-2',
         'transition-all duration-150 select-none tile-shadow',
         'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-ink/50',
         selected
@@ -17,10 +17,10 @@ export default function Tile({ tile, selected, shaking, onClick }) {
       ]
         .filter(Boolean)
         .join(' ')}
-      style={{ fontFamily: 'Cinzel, serif', fontWeight: 700, letterSpacing: '0.03em' }}
+      style={{ fontFamily: 'Cinzel, serif', fontWeight: 700, letterSpacing: '0.01em' }}
       aria-pressed={selected}
     >
-      <span className="leading-tight">{tile.label}</span>
+      <span className="leading-tight break-words w-full">{tile.label}</span>
     </button>
   )
 }
