@@ -9,7 +9,7 @@
  * Requires VITE_ANTHROPIC_API_KEY in the environment.
  */
 
-const ANTHROPIC_URL = '/api/anthropic/v1/messages'
+const ANTHROPIC_URL = '/api/anthropic'
 const MODEL = 'claude-haiku-4-5-20251001'
 
 const COLOR_DESCRIPTIONS = {

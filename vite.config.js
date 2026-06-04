@@ -12,7 +12,7 @@ function anthropicProxyPlugin(apiKey) {
         req.on('end', () => {
           const options = {
             hostname: 'api.anthropic.com',
-            path: req.url || '/v1/messages',
+            path: '/v1/messages',
             method: req.method,
             headers: {
               'content-type': 'application/json',
